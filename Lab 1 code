@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduceti propozitia : ");
+
+        String propozitia = scan.nextLine();
+
+        System.out.println("Introduceti caracterul : ");
+        char litera = scan.next().charAt(0);;
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < propozitia.length(); i++) {
+            char currentChar = propozitia.charAt(i);
+
+            if (currentChar == litera) {
+                result.append(currentChar + " am gasit " + litera + " ");
+            } else {
+                result.append(currentChar);
+            }
+        }
+        System.out.println(result.toString());
+    }}
+
